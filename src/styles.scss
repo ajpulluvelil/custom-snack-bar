@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.snack-bar-container-success {
+  background: rgba(94, 194, 148, 0.6) !important;
+}
+
+.snack-bar-container-error {
+  background: rgba(253, 3, 3, 0.6) !important;
+}
+
+.snack-bar-container-warn {
+  background: rgba(179, 192, 65, 0.6) !important;
+}
+
+.snack-bar-container-info {
+  background: rgba(68, 70, 190, 0.6) !important;
+}

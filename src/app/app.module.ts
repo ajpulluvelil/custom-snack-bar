@@ -1,18 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { CustomSnackBarComponent } from "./custom-snack-bar/custom-snack-bar.component";
+import { MatIconModule } from "@angular/material/icon";
+import { CustomeSnackBarService } from "./snack-bar-service/custome-snack-bar.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomSnackBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    CustomeSnackBarService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    CustomSnackBarComponent,
+  ],
 })
-export class AppModule { }
+export class AppModule {}

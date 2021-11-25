@@ -1,0 +1,15 @@
+<div fxLayout="row" class="snack-container">
+    <span *ngIf="data.snackType === snackType.SUCCESS">
+        <mat-icon class="success">check_circle_outline</mat-icon>
+    </span>
+    <span *ngIf="data.snackType === snackType.ERROR">
+        <mat-icon class="error">highlight_off</mat-icon>
+    </span>
+    <span *ngIf="data.snackType === snackType.WARN">
+        <mat-icon class="warn">error_outline</mat-icon>
+    </span>
+    <span *ngIf="data.snackType === snackType.INFO">
+        <mat-icon class="info">info</mat-icon>
+    </span>
+    <span class="snack-bar-message">Group "Updated on Vaccination" is deleted</span>
+</div>
